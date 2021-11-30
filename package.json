@@ -1,0 +1,49 @@
+{
+  "name": "oce-svelte-gallery-sample",
+  "version": "21.11.2",
+  "description": "A simple gallery site built using Svelte/Sapper and loading content from Oracle Content Management.",
+  "author": "Oracle America, Inc.",
+  "license": "UPL-1.0",
+  "scripts": {
+    "clean": "rm -rf __sapper__, rm -rf src/node_modules/@sapper",
+    "lint": "eslint *.js ./src ./scripts --ext .js,.svelte && markdownlint-cli2 *.md",
+    "dev": "sapper dev",
+    "build": "sapper build",
+    "buildPath": "cross-env BASE_URL=/samples/oce-svelte-gallery-sample sapper export --basepath=/samples/oce-svelte-gallery-sample",
+    "export": "sapper export",
+    "start": "node __sapper__/build",
+    "startexport": "npx serve __sapper__/export",
+    "help": "sapper export --help"
+  },
+  "dependencies": {
+    "@oracle/content-management-sdk": "^1.3.1",
+    "express": "~4.17.1",
+    "https-proxy-agent": "~5.0.0",
+    "sirv": "~1.0.18"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.12.3",
+    "@babel/plugin-syntax-dynamic-import": "~7.8.3",
+    "@babel/preset-env": "~7.12.1",
+    "@babel/runtime": "~7.15.4",
+    "@rollup/plugin-babel": "~5.3.0",
+    "@rollup/plugin-commonjs": "~21.0.1",
+    "@rollup/plugin-node-resolve": "~13.0.6",
+    "@rollup/plugin-replace": "~2.4.2",
+    "@rollup/plugin-url": "~6.1.0",
+    "cross-env": "~7.0.2",
+    "dotenv": "~10.0.0",
+    "eslint": "~8.1.0",
+    "eslint-plugin-header": "~3.1.1",
+    "eslint-plugin-import": "~2.25.1",
+    "eslint-plugin-svelte3": "~3.2.0",
+    "markdownlint": "~0.24.0",
+    "markdownlint-cli2": "~0.3.2",
+    "node-fetch": "~2.6.1",
+    "rollup": "~2.58.3",
+    "rollup-plugin-svelte": "~7.1.0",
+    "rollup-plugin-terser": "~7.0.2",
+    "sapper": "~0.29.3",
+    "svelte": "~3.44.0"
+  }
+}

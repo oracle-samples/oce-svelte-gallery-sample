@@ -1,0 +1,35 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:import/recommended"],
+  "overrides": [
+    {
+      "files": ["**/*.svelte"],
+      "processor": "svelte3/svelte3"
+    },
+    {
+      "files": ["**/*.svelte"],
+      "rules": {
+        "header/header": "off"
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "plugins": ["import", "svelte3", "header"],
+  "rules": {
+    "header/header": [2, "block", [
+      "*",
+      {"pattern": " \\* Copyright \\(c\\) (\\d{4}, )+Oracle and/or its affiliates\\."},
+      " * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl/",
+      " "
+    ]],
+    "import/no-unresolved": "off"
+  }
+}
