@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2021, Oracle and/or its affiliates.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl/
  */
 
@@ -38,7 +38,7 @@ self.addEventListener('activate', event => {
 
 
 /**
- * Fetch the asset from the network and store it in the cache. 
+ * Fetch the asset from the network and store it in the cache.
  * Fall back to the cache if the user is offline.
  */
 async function fetchAndCache(request) {

@@ -1,6 +1,6 @@
 <!--
 /**
- * Copyright (c) 2021, Oracle and/or its affiliates.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl/
  *
  * This component renders the gallery for each category and also displays the
@@ -8,7 +8,7 @@
  *
  * @param category the category of the items to display
  -->
- 
+
 <script>
   export let category;
   const { items, totalResults } = category;

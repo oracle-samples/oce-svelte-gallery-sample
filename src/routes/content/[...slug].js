@@ -1,20 +1,13 @@
 /**
- * Copyright (c) 2021, Oracle and/or its affiliates.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl/
  */
 
 import http from 'http';
 import https from 'https';
-import { getAuthValue, isAuthNeeded } from '../../scripts/server-config-utils.js';
 
 export async function get(req, res) {
-  if (isAuthNeeded()) {
-    getAuthValue().then((authValue) => {
-      handleContentRequest(req, res, authValue);
-    });
-  } else {
-    handleContentRequest(req, res, '');
-  }
+  handleContentRequest(req, res, '');
 }
 
 /*
